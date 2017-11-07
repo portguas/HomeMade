@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  HomeMade
+
+  Created by He,Yulong on 2017/8/15.
+  Copyright © 2017年 He,Yulong. All rights reserved.
+*/
+
+// root vc
+"RootTitle" = "首页";
+
+// Menu
+"QQ" = "QQ";
+"Weixin" = "微信";
+
+// Tab
+"tab_recommend" = "推荐";
+"tab_forum" = "社区";
+"tab_me" = "我";
