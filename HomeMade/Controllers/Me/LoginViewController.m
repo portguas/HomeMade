@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
-#import <YYText.h>
+#import "YYText.h"
 
 @interface LoginViewController ()
 

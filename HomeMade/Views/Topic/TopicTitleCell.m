@@ -7,7 +7,7 @@
 //
 
 #import "TopicTitleCell.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 
 @implementation TopicTitleCell
 

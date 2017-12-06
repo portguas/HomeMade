@@ -7,7 +7,7 @@
 //
 
 #import "MeInfoCollectionViewCell.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 #import "Constants.h"
 
 BOOL isHeightCalculated = NO;

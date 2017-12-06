@@ -7,7 +7,8 @@
 //
 
 #import "TopicInfoCell.h"
-#import <PureLayout.h>
+//#import <PureLayout.h>
+#import "PureLayout.h"
 
 @implementation TopicInfoCell
 

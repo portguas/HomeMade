@@ -11,8 +11,10 @@ def pods
   pod 'TPKeyboardAvoiding'
   pod 'SDWebImage', '~> 4.0'
   pod 'ZLPhotoBrowser'
+  pod 'CocoaLumberjack/Swift'
 end
 
 target "HomeMade" do
+  use_frameworks!
   pods
 end

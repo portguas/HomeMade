@@ -9,7 +9,7 @@
 #import "TopicWriteImageCell.h"
 #import "TopicWriteImageCCell.h"
 #import "UICollectionViewLeftAlignedLayout.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 
 static NSString *const kImageCellIndentify = @"kImageCellIndentify";
 

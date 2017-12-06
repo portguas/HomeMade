@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking.h>
+//#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 typedef NS_ENUM(NSInteger, NetworkMethod){
     Get = 0,

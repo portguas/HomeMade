@@ -8,7 +8,7 @@
 
 #import "RecomCellView.h"
 #import "Constants.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 
 @implementation RecomCellView
 

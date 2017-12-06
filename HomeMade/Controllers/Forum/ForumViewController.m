@@ -10,7 +10,7 @@
 #import "MeInfoCollectionViewCell.h"
 #import "Constants.h"
 #import "AppDelegate.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 #import "TopicViewController.h"
 
 static NSString *const kForumCell = @"kForumCell";

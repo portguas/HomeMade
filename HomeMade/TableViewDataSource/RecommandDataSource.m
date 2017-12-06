@@ -8,7 +8,7 @@
 
 #import "RecommandDataSource.h"
 #import "RecomCellView.h"
-#import <FlyImage.h>
+#import "FlyImage.h"
 #import "DuoBanBean.h"
 @implementation RecommandDataSource
 

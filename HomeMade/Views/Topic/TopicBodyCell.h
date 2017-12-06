@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <YYText.h>
+#import "YYText.h"
 
 @interface TopicBodyCell : UITableViewCell
 

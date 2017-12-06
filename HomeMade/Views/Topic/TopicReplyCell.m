@@ -7,7 +7,7 @@
 //
 
 #import "TopicReplyCell.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 
 @implementation TopicReplyCell
 

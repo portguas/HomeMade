@@ -82,12 +82,11 @@
 		32F262831FA8A7600031B264 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F262761FA8A31A0031B264 /* SystemConfiguration.framework */; };
 		32F262841FA8A76B0031B264 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F262771FA8A3250031B264 /* Security.framework */; };
 		32F262861FA964280031B264 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F262851FA9641A0031B264 /* AdSupport.framework */; };
-		61414DB1BAF29A8988C2380F /* libPods-HomeMade.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2CEEF748AA7B0BB844AE5B /* libPods-HomeMade.a */; };
+		6FC2C0F306C58C1125D854A1 /* Pods_HomeMade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D35BAD177012DF3947DA4A /* Pods_HomeMade.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E1E21287DEF01C48B0E5AE0 /* Pods-HomeMade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeMade.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeMade/Pods-HomeMade.release.xcconfig"; sourceTree = "<group>"; };
-		1B2CEEF748AA7B0BB844AE5B /* libPods-HomeMade.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HomeMade.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3208CE0F1F752134003E8EF3 /* UIView+ManageToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ManageToast.h"; sourceTree = "<group>"; };
 		3208CE101F752134003E8EF3 /* UIView+ManageToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ManageToast.m"; sourceTree = "<group>"; };
 		3208CE111F752134003E8EF3 /* UIView+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
@@ -234,6 +233,7 @@
 		32F2627E1FA8A65A0031B264 /* BMKLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BMKLocationKit.framework; sourceTree = "<group>"; };
 		32F262851FA9641A0031B264 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4690CC3F24380FA36DD52EDF /* Pods-HomeMade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeMade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeMade/Pods-HomeMade.debug.xcconfig"; sourceTree = "<group>"; };
+		71D35BAD177012DF3947DA4A /* Pods_HomeMade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeMade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,7 +249,7 @@
 				32F2627C1FA8A3470031B264 /* libstdc++.6.0.9.tbd in Frameworks */,
 				32F262751FA8A3110031B264 /* CoreLocation.framework in Frameworks */,
 				32F262791FA8A3320031B264 /* libsqlite3.0.tbd in Frameworks */,
-				61414DB1BAF29A8988C2380F /* libPods-HomeMade.a in Frameworks */,
+				6FC2C0F306C58C1125D854A1 /* Pods_HomeMade.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,7 +675,7 @@
 				32F262771FA8A3250031B264 /* Security.framework */,
 				32F262761FA8A31A0031B264 /* SystemConfiguration.framework */,
 				32F262741FA8A2FC0031B264 /* CoreLocation.framework */,
-				1B2CEEF748AA7B0BB844AE5B /* libPods-HomeMade.a */,
+				71D35BAD177012DF3947DA4A /* Pods_HomeMade.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -815,9 +815,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HomeMade/Pods-HomeMade-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/FlyImage/FlyImage.framework",
+				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/ZLPhotoBrowser/ZLPhotoBrowser.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlyImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLPhotoBrowser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

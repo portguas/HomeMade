@@ -7,7 +7,7 @@
 //
 
 #import "TopicBodyCell.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 
 @implementation TopicBodyCell
 

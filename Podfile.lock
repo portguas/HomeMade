@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - CocoaLumberjack/Default (3.3.0)
+  - CocoaLumberjack/Swift (3.3.0):
+    - CocoaLumberjack/Default
   - FlyImage (1.1):
     - AFNetworking (~> 3.1)
     - FlyImage/Core (= 1.1)
@@ -33,6 +36,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - CocoaLumberjack/Swift
   - FlyImage (~> 1.0)
   - LGSideMenuController
   - MJRefresh
@@ -45,6 +49,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   FlyImage: 1086dd5949e20633b8679ace9ab26a35462b9ab6
   LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -55,6 +60,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZLPhotoBrowser: 23a37735614dbb39a887451b9c13d2818dc9a8c8
 
-PODFILE CHECKSUM: b710736a2beeb366e2f8c29bda90a930cf789001
+PODFILE CHECKSUM: 026b04c21d77a819ead6284ec06976ed60f1cbdf
 
 COCOAPODS: 1.3.1

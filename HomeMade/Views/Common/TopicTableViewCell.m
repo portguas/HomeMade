@@ -7,7 +7,7 @@
 //
 
 #import "TopicTableViewCell.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 
 @implementation TopicTableViewCell
 

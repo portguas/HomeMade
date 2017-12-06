@@ -10,7 +10,7 @@
 #import "MeInfoCollectionViewCell.h"
 #import "AppDelegate.h"
 #import "Constants.h"
-#import <PureLayout.h>
+#import "PureLayout.h"
 #import "LoginViewController.h"
 
 NSString *const kMeCellIdentifier = @"MeInfoCell";
