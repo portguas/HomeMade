@@ -11,7 +11,7 @@ def pods
   pod 'TPKeyboardAvoiding'
   pod 'SDWebImage', '~> 4.0'
   pod 'ZLPhotoBrowser'
-  pod 'CocoaLumberjack/Swift'
+  pod 'CocoaLumberjack'
 end
 
 target "HomeMade" do

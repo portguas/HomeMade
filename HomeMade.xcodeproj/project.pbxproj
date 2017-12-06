@@ -214,6 +214,7 @@
 		326C5CEF1F443BB700AF75AA /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
 		326C5CF11F443C6300AF75AA /* MyTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabViewController.h; sourceTree = "<group>"; };
 		326C5CF21F443C6300AF75AA /* MyTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabViewController.m; sourceTree = "<group>"; };
+		3290B57E1FD7F15A00B2AA9C /* HomeMade.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMade.pch; sourceTree = "<group>"; };
 		32AB6B511F6500D100506291 /* BaseTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTopicModel.h; sourceTree = "<group>"; };
 		32AB6B521F6500D100506291 /* BaseTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTopicModel.m; sourceTree = "<group>"; };
 		32AB6B541F65015500506291 /* TopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicModel.h; sourceTree = "<group>"; };
@@ -583,6 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				326C5CA81F42984B00AF75AA /* main.m */,
+				3290B57E1FD7F15A00B2AA9C /* HomeMade.pch */,
 				326C5CDB1F42A64500AF75AA /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -1057,6 +1059,8 @@
 					"$(PROJECT_DIR)/HomeMade/Thirdparty",
 				);
 				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HomeMade/HomeMade.pch";
 				INFOPLIST_FILE = HomeMade/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1079,6 +1083,8 @@
 					"$(PROJECT_DIR)/HomeMade/Thirdparty",
 				);
 				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HomeMade/HomeMade.pch";
 				INFOPLIST_FILE = HomeMade/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

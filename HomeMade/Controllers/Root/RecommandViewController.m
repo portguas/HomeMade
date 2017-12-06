@@ -35,6 +35,7 @@
     [self initUI];
     
     [self loadData];
+//    DDLogDebug(@"Debug");
 }
 
 - (void)didReceiveMemoryWarning {
