@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DuoBanBean : NSObject
+@interface DuoBanBean : NSObject<NSCoding>
 
 @property (nonatomic, strong) NSString *title;
 

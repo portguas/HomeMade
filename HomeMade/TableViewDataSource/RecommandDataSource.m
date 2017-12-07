@@ -27,7 +27,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _dataSource.count - 10;
+    return _dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -38,7 +38,6 @@
     NSDictionary *dic = [NSDictionary dictionaryWithDictionary:bean.thumbs[0]];
     NSDictionary *dic1 = [dic objectForKey:@"small"];
     NSString *url = [dic1 objectForKey:@"url"];
-    
     [cell.topImage setImageURL: [NSURL URLWithString:url]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     

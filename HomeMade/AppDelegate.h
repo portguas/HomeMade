@@ -17,5 +17,7 @@
 @property (assign, nonatomic) CGFloat screenHeight;
 
 @property (assign, nonatomic) CGFloat screenWidth;
+
+@property (assign, nonatomic) BOOL hasNetwork;
 @end
 

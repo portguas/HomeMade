@@ -7,11 +7,11 @@
 //
 
 #import "RecommandViewController.h"
-#import "PureLayout.h"
 #import "RecommandDataSource.h"
 #import "RecomCellView.h"
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "MJRefresh.h"
+#import "Helper.h"
 
 @interface RecommandViewController (){
     CGFloat tabBarHeight;
@@ -97,6 +97,10 @@
     [self.tableView.mj_header beginRefreshing];
 }
 
+
+/**
+ 加载数据,先本地 后网络
+ */
 - (void)loadData {
     if (self.presenter != nil) {
         [self.presenter loadData];
@@ -107,23 +111,24 @@
 
 - (void)showResult:(NSArray *)resultArray {
     
-    [self.tableView.mj_header endRefreshing];
-    
+    BOOL b = self.tableView.mj_header.isRefreshing;
+    if (b) {
+        __weak typeof(self) weakSelf = self;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.tableView.mj_header endRefreshing];
+        });
+        
+    }
     self.dataSource = [[RecommandDataSource alloc] initWithData:resultArray];
     self.tableView.dataSource = self.dataSource;
     [self.tableView reloadData];
-    NSLog(@"show");
 }
 
 - (void)showError:(NSString *)errorCode errorMsg:(NSString *)errMsg {
-    
+     [self.tableView.mj_header endRefreshing];
 }
 
 #pragma UITableViewDelegate
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 150;
-//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"");

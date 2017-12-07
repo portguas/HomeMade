@@ -16,16 +16,23 @@
 
 - (void)loadData {
     NSLog(@"loadData");
+//    if (![Helper hasNetwork]) {
+//        NSArray *arrList = [self getLocalData];
+//        if (arrList == nil) {
+//            if (self.delegate != nil) {
+//                [self.delegate showError:@"没有网络" errorMsg:nil];
+//            }
+//        }else{
+//             [self.delegate showResult:[arrList copy]];
+//        }
+//        return;
+//    }
     
-//    [[NetWorkManager sharedManager] request_recommnad_withPath:nil date:nil andBlock:^(id data, NSError *error) {
-//        if (error) {
-//            [self.delegate showError:@"" errorMsg:@""];
-//        }
-//        NSArray *array = (NSArray *)data;
-//        if (self.delegate != nil) {
-//            [self.delegate showResult:[array copy]];
-//        }
-//    }];
+    NSArray *arrList = [self getLocalData];
+    if (arrList != nil) {
+        [self.delegate showResult:[arrList copy]];
+    }
+    
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:10];
     // 获取数据
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -42,24 +49,40 @@
                     if (data.thumbs.count != 0) {
                         [array addObject: data];
                     }
-                    
                 }
-                
+
                 if (self.delegate != nil) {
                     [self.delegate showResult:[array copy]];
                 }
+                
+                [self saveList:array];
+                
             }
         }
-        NSLog(@"Success");
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"Error: %@",error);
         if (self.delegate != nil) {
             [self.delegate showError:[NSString stringWithFormat:@"%li",(long)error.code] errorMsg:[error localizedDescription]];
         }
         
     }];
-    
-    
+}
+
+- (void)saveList:(NSArray *)dataLists{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 将数据进行保存
+        NSString *path = [Helper getFilePath:@"shuju" fileName:@"list.conf"];
+        [NSKeyedArchiver archiveRootObject:dataLists toFile:path];
+    });
+}
+
+- (NSArray *)getLocalData{
+    NSString *path = [Helper getFilePath:@"shuju" fileName:@"list.conf"];
+    @try{
+        id data = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        return (NSArray *)data;
+    }@catch (NSException *ex){
+        return nil;
+    }
     
 }
 

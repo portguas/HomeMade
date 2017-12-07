@@ -27,4 +27,22 @@
  */
 + (BOOL)checkCameraAuthorizationStatus;
 
+
+/**
+ 检查是否有网络
+
+ @return 返回网络状态
+ */
++ (BOOL)hasNetwork;
+
+
+/**
+ 返回文件的路径
+
+ @param dir 目录路径
+ @param fileName 文件名
+ @return 返回完整路径
+ */
++ (NSString *)getFilePath:(NSString *)dir fileName:(NSString *)fileName;
+
 @end

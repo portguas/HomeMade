@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BasePresenter.h"
+#import "Helper.h"
 
 @protocol RecomPresenterProtocol <NSObject>
 

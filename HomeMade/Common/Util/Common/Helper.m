@@ -8,6 +8,7 @@
 
 #import "Helper.h"
 #import <Photos/Photos.h>
+#import "AppDelegate.h"
 
 @implementation Helper
 
@@ -43,4 +44,27 @@
     [ac addAction:cancelAction];
 }
 
++ (BOOL)hasNetwork {
+    return ((AppDelegate *)[[UIApplication sharedApplication] delegate]).hasNetwork;
+}
+
++ (NSString *)getFilePath:(NSString *)dir fileName:(NSString *)fileName {
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *sysCachePath = [[path objectAtIndex:0] stringByAppendingPathComponent:@"Caches"];
+    NSString *createDir = [sysCachePath stringByAppendingPathComponent:dir];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    BOOL isDir = YES;
+    BOOL isSuccess = YES;
+    NSString *filePath;
+    if (![fileManager fileExistsAtPath:createDir isDirectory:&isDir]) {
+        isSuccess = [fileManager createDirectoryAtPath:createDir withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    if (isSuccess) {
+         filePath = [createDir stringByAppendingPathComponent:fileName];
+        return filePath;
+    }else {
+        return nil;
+    }
+}
 @end

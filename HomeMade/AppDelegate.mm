@@ -41,7 +41,28 @@
     [DDLog addLogger:fileLogger];
 #endif
 
-    DDLogInfo(@"test");
+    // 网络
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+                _hasNetwork = false;
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                _hasNetwork = false;
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                _hasNetwork = true;
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                _hasNetwork = true;
+                break;
+            default:
+                _hasNetwork = false;
+                break;
+        }
+    }];
     return YES;
 }
 
