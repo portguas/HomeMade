@@ -16,6 +16,7 @@
 static NSString *const kForumCell = @"kForumCell";
 @interface ForumViewController (){
     CGFloat cellWidth;
+    NSArray *categoryArray;
 }
 
 @end
@@ -38,6 +39,7 @@ static NSString *const kForumCell = @"kForumCell";
 
 - (void)initParams {
     cellWidth = (((AppDelegate *)[UIApplication sharedApplication].delegate).screenWidth - 2 * kCellInteritemSpacing) / 3;
+    categoryArray = @[@"运动", @"娱乐", @"摄影", @"二次元", @"车友交流",@"大嘴夸"];
 }
 
 - (void)initViews {
@@ -50,7 +52,7 @@ static NSString *const kForumCell = @"kForumCell";
     layout.estimatedItemSize = CGSizeMake(cellWidth, 200);
     
     self.forumCollectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
-    self.forumCollectionView.backgroundColor = [UIColor yellowColor];
+    self.forumCollectionView.backgroundColor = [UIColor brownColor];
     self.forumCollectionView.delegate = self;
     self.forumCollectionView.dataSource =self;
     
@@ -69,21 +71,19 @@ static NSString *const kForumCell = @"kForumCell";
 
 #pragma UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    return categoryArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MeInfoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kForumCell forIndexPath:indexPath];
-    cell.cellImage.image = [UIImage imageNamed:@"tabbar_me_selected"];
-    cell.cellName.text = @"运动";
-    cell.backgroundColor = [UIColor redColor];
+    cell.cellImage.image = [UIImage imageNamed:@"wow"];
+    cell.cellName.text = categoryArray[indexPath.row];
     return cell;
 }
 
 #pragma UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     TopicViewController *vc = [[TopicViewController alloc] init];
-//    [vc setValue:[NSNumber numberWithInteger:indexPath.row] forKey:@"categoryId"];
     [vc setValue:[self categoryForIndex:indexPath.row] forKey:@"cateInfo"];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];

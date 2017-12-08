@@ -57,6 +57,7 @@
     tabbar.tabItemSelectedColor = [UIColor redColor];
     tabbar.tabItemNormalFontSize = 14.0f;
     tabbar.trackColor = [UIColor redColor];
+    
     self.itemArray_ = [NSMutableArray array];
     DLScrollTabbarItem *item = [DLScrollTabbarItem itemWithTitle:@"推荐" width:80];
     [self.itemArray_ addObject:item];
@@ -68,11 +69,16 @@
     
     self.slideView.tabbar = tabbar;
     self.slideView.cache = cache;
-    self.slideView.tabbarBottomSpacing = 5;
+    self.slideView.tabbarBottomSpacing = 2;
     self.slideView.baseViewController = self;
     self.slideView.delegate = self;
     [self.slideView setup];
     self.slideView.selectedIndex = 0;
+    
+    // 添加下划线
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 34, self.view.frame.size.width, 1)];
+    lineView.backgroundColor = [UIColor brownColor];
+    [self.view addSubview:lineView];
 }
 
 #pragma selector 

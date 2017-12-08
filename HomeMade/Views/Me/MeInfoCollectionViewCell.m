@@ -53,14 +53,12 @@ BOOL isHeightCalculated = NO;
     _cellName.textAlignment = NSTextAlignmentCenter;
     _cellName.numberOfLines = 1;
     _cellName.textColor = [UIColor blackColor];
-    _cellName.backgroundColor = [UIColor redColor];;
     [self.contentView addSubview:_cellName];
     
     [_cellImage autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.contentView withOffset:5];
-    [_cellImage autoSetDimension:ALDimensionHeight toSize:30];
+    [_cellImage autoSetDimension:ALDimensionHeight toSize:60];
+    [_cellImage autoSetDimension:ALDimensionWidth toSize:60];
     [_cellImage autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    //        [_cellImage autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.contentView];
-    //        [_cellImage autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.contentView];
     [_cellImage autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_cellName withOffset:-5];
     
     [_cellName autoAlignAxisToSuperviewAxis:ALAxisVertical];

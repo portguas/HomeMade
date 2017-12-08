@@ -31,10 +31,6 @@ static NSString *const kTopicReply = @"topicReply";
     return self;
 }
 
-//- (void)loadView {
-//    [super loadView];
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -132,11 +128,26 @@ static NSString *const kTopicReply = @"topicReply";
 }
 
 #pragma Config Cell
+
+/**
+ 主题信息
+
+ @param cell 主题cell
+ @param indexPath 行数
+ @return 返回cell
+ */
 - (TopicTitleCell *)confitTitleCellWithtCell:(TopicTitleCell *)cell indexPath:(NSIndexPath *)indexPath {
     cell.title.text = @"这是一个测试的主题啊,测试的啊,真的是测试的啊";
     return cell;
 }
 
+/**
+ 主题用户信息
+
+ @param cell 用户cell
+ @param indexPath 行数
+ @return 用户信息cell
+ */
 - (TopicInfoCell *)confitInfoCellWithtCell:(TopicInfoCell *)cell indexPath:(NSIndexPath *)indexPath {
     cell.avatarImage.image = [UIImage imageNamed:@"tabbar_me_selected"];
     cell.userNickName.text = @"portguas";
@@ -148,7 +159,7 @@ static NSString *const kTopicReply = @"topicReply";
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"这是主题的内容啊,主题的内容啊,,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊,主题的内容啊"];
     str.yy_font = [UIFont boldSystemFontOfSize:17];
     str.yy_color = [UIColor blackColor];
-    [str yy_setColor:[UIColor redColor] range:NSMakeRange(0, 4)];
+//    [str yy_setColor:[UIColor redColor] range:NSMakeRange(0, 4)];
     str.yy_lineSpacing = 10;
     UIFont *font = [UIFont systemFontOfSize:16];
     {

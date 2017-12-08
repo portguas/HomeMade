@@ -50,7 +50,7 @@ static NSString *const kTopicCell = @"kTopicCell";
     [self.tableViewOfTopic registerClass:[TopicTableViewCell class] forCellReuseIdentifier:kTopicCell];
     self.tableViewOfTopic.estimatedRowHeight = 60;
     self.tableViewOfTopic.rowHeight = UITableViewAutomaticDimension;
-    self.tableViewOfTopic.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableViewOfTopic.separatorStyle = UITableViewCellSelectionStyleNone;
     [self.view addSubview:self.tableViewOfTopic];
 
     [self.tableViewOfTopic autoPinToTopLayoutGuideOfViewController:self withInset:0];
@@ -93,7 +93,7 @@ static NSString *const kTopicCell = @"kTopicCell";
     cell.timeLabel.text = @"刚刚";
     cell.replyImageView.image = [UIImage imageNamed:@"tabbar_me"];
     cell.replyLabel.text = @"100";
-    
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -101,6 +101,7 @@ static NSString *const kTopicCell = @"kTopicCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TopicDetailViewController *vc = [[TopicDetailViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 

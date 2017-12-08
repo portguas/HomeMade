@@ -69,6 +69,7 @@
 		326C5CE71F43EED800AF75AA /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326C5CE61F43EED800AF75AA /* SplashViewController.m */; };
 		326C5CF01F443BB700AF75AA /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326C5CEF1F443BB700AF75AA /* BaseTabBarViewController.m */; };
 		326C5CF31F443C6400AF75AA /* MyTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326C5CF21F443C6300AF75AA /* MyTabViewController.m */; };
+		32A044101FDA660500985571 /* wow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32A0440F1FDA660500985571 /* wow@3x.png */; };
 		32AB6B531F6500D100506291 /* BaseTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB6B521F6500D100506291 /* BaseTopicModel.m */; };
 		32AB6B561F65015500506291 /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB6B551F65015500506291 /* TopicModel.m */; };
 		32AB6B591F65165800506291 /* NSDictionary+NotNullKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB6B581F65165800506291 /* NSDictionary+NotNullKey.m */; };
@@ -215,6 +216,7 @@
 		326C5CF11F443C6300AF75AA /* MyTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabViewController.h; sourceTree = "<group>"; };
 		326C5CF21F443C6300AF75AA /* MyTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabViewController.m; sourceTree = "<group>"; };
 		3290B57E1FD7F15A00B2AA9C /* HomeMade.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMade.pch; sourceTree = "<group>"; };
+		32A0440F1FDA660500985571 /* wow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wow@3x.png"; sourceTree = "<group>"; };
 		32AB6B511F6500D100506291 /* BaseTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTopicModel.h; sourceTree = "<group>"; };
 		32AB6B521F6500D100506291 /* BaseTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTopicModel.m; sourceTree = "<group>"; };
 		32AB6B541F65015500506291 /* TopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicModel.h; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 		326C5CA61F42984B00AF75AA /* HomeMade */ = {
 			isa = PBXGroup;
 			children = (
+				32A0440C1FDA65EB00985571 /* Resource */,
 				32426CD51F5291B7006F6DDE /* TableViewDataSource */,
 				3266222C1F4DC191008528FD /* Bean */,
 				326C5CBE1F429F1000AF75AA /* Common */,
@@ -667,6 +670,30 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		32A0440C1FDA65EB00985571 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				32A0440D1FDA65EB00985571 /* images */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		32A0440D1FDA65EB00985571 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				32A0440E1FDA65FB00985571 /* Forum */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		32A0440E1FDA65FB00985571 /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				32A0440F1FDA660500985571 /* wow@3x.png */,
+			);
+			path = Forum;
+			sourceTree = "<group>";
+		};
 		67BFA164EAFA58921FF394B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,6 +781,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				326C5CB71F42984B00AF75AA /* LaunchScreen.storyboard in Resources */,
+				32A044101FDA660500985571 /* wow@3x.png in Resources */,
 				32699DD81F5E9D1D001878A8 /* RecomCellView.xib in Resources */,
 				326C5CD91F42A64500AF75AA /* Localizable.strings in Resources */,
 				326C5CDE1F42C91100AF75AA /* Menu.png in Resources */,

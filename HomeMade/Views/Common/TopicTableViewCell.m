@@ -60,8 +60,11 @@
         [self.contentView addSubview:_replyLabel];
         
         self.lineView = [[UIView alloc] init];;
-        self.lineView.backgroundColor = [UIColor redColor];
+        self.lineView.backgroundColor = [UIColor grayColor];
         [self.contentView addSubview:_lineView];
+        
+        UIColor *color = [[UIColor alloc] initWithRed:176/255 green:196/255 blue:222/255 alpha:0.1];
+        self.selectedBackgroundView.backgroundColor = color;
         
         // 添加约束
         [_topicTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.contentView withOffset:5];
@@ -94,8 +97,17 @@
         [_lineView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.contentView];
         [_lineView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.contentView withOffset:-1];
         [_lineView autoSetDimension:ALDimensionHeight toSize:1];
+        
     }
     
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    
+//    self.selectedBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height - 10)];
+    
 }
 @end
