@@ -28,7 +28,7 @@
     [text yy_setColor:[UIColor redColor] range:NSMakeRange(0, 4)];
     text.yy_lineSpacing = 10;
     _yyLabel = [YYLabel new];
-//    _yyLabel.frame = CGRectMake(0, 0, 300, 200);
+    //    _yyLabel.frame = CGRectMake(0, 0, 300, 200);
     _yyLabel.numberOfLines = 0;
     _yyLabel.textAlignment = NSTextAlignmentLeft;
     _yyLabel.attributedText = text;
@@ -42,8 +42,8 @@
 }
 
 - (void)initViews {
-//    __weak typeof(self) weakSelf = self;
-//    self.navigationController.interactivePopGestureRecognizer.delegate =  weakSelf;
+    //    __weak typeof(self) weakSelf = self;
+    //    self.navigationController.interactivePopGestureRecognizer.delegate =  weakSelf;
     
     self.navigationItem.title = @"登录";
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backAction:)];
@@ -71,7 +71,8 @@
 }
 
 - (void)backAction:(id)sender {
-     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.view endEditing:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)accountChange:(UITextField *)textfield{

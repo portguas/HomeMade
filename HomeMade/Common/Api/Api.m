@@ -13,6 +13,8 @@ NSString * const kDouBanUrl = @"https://moment.douban.com/api/stream/date/2016-0
 
 NSString * const kBaseUrl =@"https://moment.douban.com";// @"https://coding.net/";
 
+NSString * const  kDOubanDetail = @"https://moment.douban.com/api/post/";
+
 @implementation Api
 
 @end

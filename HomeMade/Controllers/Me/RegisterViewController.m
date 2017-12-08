@@ -58,9 +58,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)writeTopic:(id)sender {
-    
-}
 
 - (IBAction)tapGetCode:(id)sender {
     if([self.registerTFVPhone.text isEmpty]){
