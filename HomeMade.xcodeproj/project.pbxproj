@@ -69,6 +69,10 @@
 		326C5CE71F43EED800AF75AA /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326C5CE61F43EED800AF75AA /* SplashViewController.m */; };
 		326C5CF01F443BB700AF75AA /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326C5CEF1F443BB700AF75AA /* BaseTabBarViewController.m */; };
 		326C5CF31F443C6400AF75AA /* MyTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326C5CF21F443C6300AF75AA /* MyTabViewController.m */; };
+		32922C3D1FFF21750033926C /* LaunchAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32922C3C1FFF21750033926C /* LaunchAdViewController.m */; };
+		32922C401FFF52260033926C /* LaunchAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 32922C3F1FFF52260033926C /* LaunchAdConfiguration.m */; };
+		32922C461FFF5A250033926C /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 32922C431FFF5A240033926C /* FLAnimatedImage.m */; };
+		32922C471FFF5A250033926C /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32922C451FFF5A240033926C /* FLAnimatedImageView.m */; };
 		32A044101FDA660500985571 /* wow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32A0440F1FDA660500985571 /* wow@3x.png */; };
 		32AB6B531F6500D100506291 /* BaseTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB6B521F6500D100506291 /* BaseTopicModel.m */; };
 		32AB6B561F65015500506291 /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB6B551F65015500506291 /* TopicModel.m */; };
@@ -216,6 +220,14 @@
 		326C5CF11F443C6300AF75AA /* MyTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabViewController.h; sourceTree = "<group>"; };
 		326C5CF21F443C6300AF75AA /* MyTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabViewController.m; sourceTree = "<group>"; };
 		3290B57E1FD7F15A00B2AA9C /* HomeMade.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMade.pch; sourceTree = "<group>"; };
+		32922C3B1FFF21750033926C /* LaunchAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchAdViewController.h; sourceTree = "<group>"; };
+		32922C3C1FFF21750033926C /* LaunchAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchAdViewController.m; sourceTree = "<group>"; };
+		32922C3E1FFF52260033926C /* LaunchAdConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchAdConfiguration.h; sourceTree = "<group>"; };
+		32922C3F1FFF52260033926C /* LaunchAdConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchAdConfiguration.m; sourceTree = "<group>"; };
+		32922C421FFF5A240033926C /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		32922C431FFF5A240033926C /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		32922C441FFF5A240033926C /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		32922C451FFF5A240033926C /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		32A0440F1FDA660500985571 /* wow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wow@3x.png"; sourceTree = "<group>"; };
 		32AB6B511F6500D100506291 /* BaseTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTopicModel.h; sourceTree = "<group>"; };
 		32AB6B521F6500D100506291 /* BaseTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTopicModel.m; sourceTree = "<group>"; };
@@ -616,6 +628,10 @@
 				326C5CE51F43EED800AF75AA /* SplashViewController.h */,
 				326C5CE61F43EED800AF75AA /* SplashViewController.m */,
 				326C5CE21F43158600AF75AA /* MainViewController.h */,
+				32922C3B1FFF21750033926C /* LaunchAdViewController.h */,
+				32922C3E1FFF52260033926C /* LaunchAdConfiguration.h */,
+				32922C3F1FFF52260033926C /* LaunchAdConfiguration.m */,
+				32922C3C1FFF21750033926C /* LaunchAdViewController.m */,
 				326C5CE31F43158600AF75AA /* MainViewController.m */,
 				326C5CF11F443C6300AF75AA /* MyTabViewController.h */,
 				326C5CF21F443C6300AF75AA /* MyTabViewController.m */,
@@ -637,6 +653,7 @@
 		326C5CC11F429F1000AF75AA /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				32922C411FFF5A240033926C /* FLAnimatedImage */,
 				32F2627E1FA8A65A0031B264 /* BMKLocationKit.framework */,
 				323D61931F4574FE00198875 /* DLSlideView */,
 			);
@@ -668,6 +685,17 @@
 				326C5CD11F42A44100AF75AA /* BaseViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		32922C411FFF5A240033926C /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				32922C421FFF5A240033926C /* FLAnimatedImage.h */,
+				32922C431FFF5A240033926C /* FLAnimatedImage.m */,
+				32922C441FFF5A240033926C /* FLAnimatedImageView.h */,
+				32922C451FFF5A240033926C /* FLAnimatedImageView.m */,
+			);
+			path = FLAnimatedImage;
 			sourceTree = "<group>";
 		};
 		32A0440C1FDA65EB00985571 /* Resource */ = {
@@ -888,6 +916,7 @@
 				32699DE11F5FF677001878A8 /* RegisterViewController.m in Sources */,
 				326C5CF31F443C6400AF75AA /* MyTabViewController.m in Sources */,
 				32AB6B591F65165800506291 /* NSDictionary+NotNullKey.m in Sources */,
+				32922C461FFF5A250033926C /* FLAnimatedImage.m in Sources */,
 				32AB6B531F6500D100506291 /* BaseTopicModel.m in Sources */,
 				32426CD81F5291D7006F6DDE /* RecommandDataSource.m in Sources */,
 				32699DFC1F613953001878A8 /* NetWorkRequestClient.m in Sources */,
@@ -898,6 +927,7 @@
 				3266222F1F4DC88C008528FD /* DuoBanBean.m in Sources */,
 				323D61AA1F4574FE00198875 /* DLScrollTabbarView.m in Sources */,
 				32AB6B561F65015500506291 /* TopicModel.m in Sources */,
+				32922C401FFF52260033926C /* LaunchAdConfiguration.m in Sources */,
 				323D61AC1F4574FE00198875 /* DLUtility.m in Sources */,
 				32699DEC1F60F4BE001878A8 /* MyAlertView.m in Sources */,
 				323D61921F45749F00198875 /* RootViewController.m in Sources */,
@@ -919,6 +949,7 @@
 				32699DE91F60E8B8001878A8 /* NSString+Common.m in Sources */,
 				32699E0E1F628F9D001878A8 /* TopicTableViewCell.m in Sources */,
 				326C5CE71F43EED800AF75AA /* SplashViewController.m in Sources */,
+				32922C471FFF5A250033926C /* FLAnimatedImageView.m in Sources */,
 				323D61B71F46E00500198875 /* BasePresenter.m in Sources */,
 				32699E061F624420001878A8 /* NSDate+Common.m in Sources */,
 				323D61A81F4574FE00198875 /* DLSlideView.m in Sources */,
@@ -936,6 +967,7 @@
 				323D61A71F4574FE00198875 /* DLCustomSlideView.m in Sources */,
 				323D618C1F45749900198875 /* LeftViewController.m in Sources */,
 				323C9DD01F6BA95300725E1F /* TopicWriteTextCell.m in Sources */,
+				32922C3D1FFF21750033926C /* LaunchAdViewController.m in Sources */,
 				32699DDB1F5E9F09001878A8 /* MeInfoCollectionViewCell.m in Sources */,
 				323D61A61F4574FE00198875 /* DLLRUCache.m in Sources */,
 				32349E501F64E76B00300F93 /* TopicTitleCell.m in Sources */,

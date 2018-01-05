@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Constants.h"
 
 @interface Helper : NSObject
 
@@ -44,5 +45,14 @@
  @return 返回完整路径
  */
 + (NSString *)getFilePath:(NSString *)dir fileName:(NSString *)fileName;
+
+
+/**
+ 封装一下DDLog,每次输出的时候带上关键字HomeMade
+ 便于过滤
+
+ @param string 日志
+ */
++ (void)DDLog:(NSString *)string;
 
 @end

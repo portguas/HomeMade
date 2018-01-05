@@ -8,6 +8,7 @@
 
 #import "NetWorkRequestClient.h"
 #import "Api.h"
+#import "Helper.h"
 
 static NetWorkRequestClient *instance = nil;
 @implementation NetWorkRequestClient
@@ -112,6 +113,7 @@ static NetWorkRequestClient *instance = nil;
             break;
     }
 }
+
 
 #pragma helper
 - (id)handleResponse:(id)response{

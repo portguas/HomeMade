@@ -20,6 +20,7 @@ CGFloat const kCellTopMargin = 5;
 CGFloat const kCellLabelTopMargin = 5;
 CGFloat const kCellLableBottomMargin = 5;
 
+NSString * const HMIdentifier = @"HomeMade";
 @implementation Constants
 
 @end

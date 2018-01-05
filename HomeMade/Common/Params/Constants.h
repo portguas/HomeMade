@@ -12,6 +12,8 @@
 extern CGFloat const kImageHeight;
 extern CGFloat const kTextMargin;
 
+// log的标识
+extern NSString * const HMIdentifier;
 // 我的界面的参数
 extern CGFloat const kCellInteritemSpacing;
 extern CGFloat const kCellLineSpacing;

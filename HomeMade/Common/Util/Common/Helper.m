@@ -67,4 +67,8 @@
         return nil;
     }
 }
+
++ (void)DDLog:(NSString *)string {
+    DDLogInfo(@"%@: %@", HMIdentifier, string);
+}
 @end

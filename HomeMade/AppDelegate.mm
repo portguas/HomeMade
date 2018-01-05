@@ -10,7 +10,7 @@
 #import "SplashViewController.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, assign) BOOL showAd;
 @end
 
 @implementation AppDelegate
@@ -21,15 +21,15 @@
     // 引导页
     self.screenHeight = [UIScreen mainScreen].bounds.size.height;
     self.screenWidth = [UIScreen mainScreen].bounds.size.width;
-    
+    self.showAd = YES;
     [NSThread sleepForTimeInterval:1];
     
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     if(![def boolForKey:@"notFirst"]){
         // 第一次
+        self.showAd = NO;
         self.window.rootViewController = [[SplashViewController alloc] init];
     }
-    
     // 配置日志文件
 #ifdef NeedLogToLocal
     [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
@@ -63,6 +63,9 @@
                 break;
         }
     }];
+    
+    // 启动屏广告
+    
     return YES;
 }
 
