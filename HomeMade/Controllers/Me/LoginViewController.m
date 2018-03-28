@@ -90,6 +90,18 @@
 }
 - (IBAction)tapFindPwd:(id)sender {
 }
+
+- (IBAction)tapLogin:(id)sender {
+    // 这里注意ip地址写的是电脑端的ip，因为是手机连到电脑的！
+    NSString *testLoginAddress = @"http://172.18.182.35:8080/symphony/api/article/1521687285127";
+    [[NetWorkManager sharedManager] request_ad_withPath:testLoginAddress andBlock:^(id data, NSError *erroe) {
+        NSDictionary *dic = (NSDictionary *)data;
+        if ([dic objectForKey:@"key"]) {
+            NSString *keyValue = [data objectForKey:@"key"];
+            NSLog(@"%@", keyValue);
+        }
+    }];
+}
 #pragma UITextFieldDelegate
 
 

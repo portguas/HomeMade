@@ -33,6 +33,7 @@ static NetWorkRequestClient *instance = nil;
         return nil;
     }
     self.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
     self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
@@ -61,7 +62,8 @@ static NetWorkRequestClient *instance = nil;
         NSLog(@"HM请求方法为Post:%@", path);
     }
     
-    path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
+    // 如果链接是https://或者http://开头的话就会吧://和转化了导致访问不对. 以后做路径转换只做后面参数的 一级域名不做
+//    path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
     
     switch (method) {
         case Get:

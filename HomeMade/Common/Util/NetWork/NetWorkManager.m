@@ -72,7 +72,7 @@
 }
 
 - (void)request_ad_withPath:(NSString *)path andBlock:(void (^)(id, NSError *))block {
-    [[NetWorkRequestClient sharedClient] requestAdDataWithPath:path andBlock:^(id data, NSError *error) {
+    [[NetWorkRequestClient sharedClient] requestJsonDataWithPath:path withParams:nil withMethodType:Get andBlock:^(id data, NSError *error) {
         if (!data) {
             block(nil, error);
         }else {

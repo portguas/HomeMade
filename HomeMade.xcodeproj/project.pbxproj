@@ -73,6 +73,7 @@
 		32922C401FFF52260033926C /* LaunchAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 32922C3F1FFF52260033926C /* LaunchAdConfiguration.m */; };
 		32922C461FFF5A250033926C /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 32922C431FFF5A240033926C /* FLAnimatedImage.m */; };
 		32922C471FFF5A250033926C /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32922C451FFF5A240033926C /* FLAnimatedImageView.m */; };
+		329CE8A1200347AA00B4904F /* DownAndUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 329CE8A0200347AA00B4904F /* DownAndUploadManager.m */; };
 		32A044101FDA660500985571 /* wow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32A0440F1FDA660500985571 /* wow@3x.png */; };
 		32AB6B531F6500D100506291 /* BaseTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB6B521F6500D100506291 /* BaseTopicModel.m */; };
 		32AB6B561F65015500506291 /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB6B551F65015500506291 /* TopicModel.m */; };
@@ -228,6 +229,8 @@
 		32922C431FFF5A240033926C /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
 		32922C441FFF5A240033926C /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		32922C451FFF5A240033926C /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		329CE89F200347AA00B4904F /* DownAndUploadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownAndUploadManager.h; sourceTree = "<group>"; };
+		329CE8A0200347AA00B4904F /* DownAndUploadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownAndUploadManager.m; sourceTree = "<group>"; };
 		32A0440F1FDA660500985571 /* wow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wow@3x.png"; sourceTree = "<group>"; };
 		32AB6B511F6500D100506291 /* BaseTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTopicModel.h; sourceTree = "<group>"; };
 		32AB6B521F6500D100506291 /* BaseTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTopicModel.m; sourceTree = "<group>"; };
@@ -517,6 +520,8 @@
 			children = (
 				32699DF71F6136B1001878A8 /* NetWorkManager.h */,
 				32699DF81F6136B1001878A8 /* NetWorkManager.m */,
+				329CE89F200347AA00B4904F /* DownAndUploadManager.h */,
+				329CE8A0200347AA00B4904F /* DownAndUploadManager.m */,
 				32699DFA1F613953001878A8 /* NetWorkRequestClient.h */,
 				32699DFB1F613953001878A8 /* NetWorkRequestClient.m */,
 			);
@@ -970,6 +975,7 @@
 				32922C3D1FFF21750033926C /* LaunchAdViewController.m in Sources */,
 				32699DDB1F5E9F09001878A8 /* MeInfoCollectionViewCell.m in Sources */,
 				323D61A61F4574FE00198875 /* DLLRUCache.m in Sources */,
+				329CE8A1200347AA00B4904F /* DownAndUploadManager.m in Sources */,
 				32349E501F64E76B00300F93 /* TopicTitleCell.m in Sources */,
 				323C9DD31F6BAE0F00725E1F /* TextViewWithPlaceHolder.m in Sources */,
 				326C5CF01F443BB700AF75AA /* BaseTabBarViewController.m in Sources */,
